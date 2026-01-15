@@ -41,10 +41,10 @@ function App() {
         >
           <div className="min-h-[calc(100vh-6rem)] bg-black/40 flex items-center justify-center px-6">
             <div className="text-center max-w-3xl">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-[#F5F0E8] mb-6 leading-tight">
                 Your Career Comeback Starts Here
               </h1>
-              <p className="text-xl text-white/80 mb-8">
+              <p className="text-xl text-[#F5F0E8]/80 mb-8">
                 Empowering professional mums to navigate their return to the
                 workforce with confidence.
               </p>
