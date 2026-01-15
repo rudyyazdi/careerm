@@ -13,5 +13,5 @@
   <!-- Flower center -->
   <circle cx="48" cy="22" r="4" fill="#F5D56A"/>
   <!-- Leaf -->
-  <path d="M56 30C56 30 60 36 56 42C56 42 52 36 56 30Z" fill="#4A7C59"/>
+  <path d="M54 28C54 28 62 30 64 36C64 36 56 34 54 28Z" fill="#4A7C59"/>
 </svg>
