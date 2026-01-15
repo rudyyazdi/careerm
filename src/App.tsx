@@ -2,8 +2,8 @@ function App() {
   return (
     <div className="min-h-screen bg-[#F5F0E8]">
       {/* Navigation - sits on cream background */}
-      <nav className="fixed top-0 left-0 right-0 z-10 bg-[#F5F0E8] h-20 flex items-center">
-        <div className="max-w-6xl mx-auto px-6 w-full flex items-center justify-between">
+      <nav className="fixed top-0 left-0 right-0 z-30 bg-[#F5F0E8] h-20 flex items-center">
+        <div className="px-8 w-full flex items-center justify-between">
           <a
             href="/"
             className="text-2xl font-semibold text-[#2D4A3E] tracking-tight"
