@@ -5,7 +5,7 @@ export default function Home() {
     <div className="relative z-20 pt-20 px-4 min-h-screen">
       <div
         className="min-h-[calc(100vh-6rem)] bg-cover bg-center bg-no-repeat rounded-3xl overflow-hidden"
-        style={{ backgroundImage: "url('/Background.png')" }}
+        style={{ backgroundImage: "url('/bg2.png')" }}
       >
         <div className="min-h-[calc(100vh-6rem)] bg-black/40 flex items-center justify-center px-6">
           <div className="text-center max-w-3xl">
