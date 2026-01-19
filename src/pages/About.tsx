@@ -1,15 +1,16 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const founders = [
-  {
-    name: "Carly",
-    image: "/Carly.jpg",
-    bio: "A passionate advocate for working mothers, Carly brings her experience in corporate leadership and her journey as a mum to help women thrive in both worlds.",
-  },
   {
     name: "Naomi",
     image: "/Naomi.png",
     bio: "With a background in community building and a heart for supporting women, Naomi is dedicated to creating meaningful connections and resources for working mamas.",
+  },
+  {
+    name: "Carly",
+    image: "/Carly.jpg",
+    bio: "A passionate advocate for working mothers, Carly brings her experience in corporate leadership and her journey as a mum to help women thrive in both worlds.",
   },
 ];
 
@@ -97,7 +98,9 @@ export default function About() {
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-lg text-[#2D4A3E]/80">
                 <span className="text-[#2D4A3E] text-xl">›</span>
-                Events
+                <Link to="/events" className="hover:text-[#2D4A3E] hover:underline transition-colors">
+                  Events
+                </Link>
               </li>
               <li className="flex items-center gap-3 text-lg text-[#2D4A3E]/80">
                 <span className="text-[#2D4A3E] text-xl">›</span>
