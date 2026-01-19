@@ -9,12 +9,11 @@ export default function Home() {
       >
         <div className="min-h-[calc(100vh-6rem)] bg-black/40 flex items-center justify-center px-6">
           <div className="text-center max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-[#F5F0E8] mb-6 leading-tight">
-              Your Career Comeback Starts Here
-            </h1>
+            <h2 className="text-xl md:text-5xl font-bold text-[#F5F0E8] mb-6 leading-tight">
+              Raising a family and a career shouldn't be a solo mission
+            </h2>
             <p className="text-xl text-[#F5F0E8]/80 mb-8">
-              Empowering professional mums to navigate their return to the
-              workforce with confidence.
+            Join a circle of women who understand the juggle. From maternity leave planning to boardroom leadership, we connect you with the knowledge and community to thrive as both a mother and a professional.
             </p>
             <Link
               to="/events"
