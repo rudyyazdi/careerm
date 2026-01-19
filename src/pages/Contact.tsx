@@ -6,9 +6,18 @@ export default function Contact() {
           <h1 className="text-5xl md:text-6xl font-bold text-[#2D4A3E] mb-6 leading-tight">
             Contact Us
           </h1>
-          <p className="text-xl text-[#2D4A3E]/80 mb-8">
-            Get in touch with Career Mamas.
+          <p className="text-xl text-[#2D4A3E]/80 mb-4">
+            Have questions, want to get involved, or just want to get in touch?
           </p>
+          <p className="text-xl text-[#2D4A3E]/80 mb-8">
+            We'd love to hear from you.
+          </p>
+          <a
+            href="mailto:info@careermamascircle.com"
+            className="text-2xl text-[#2D4A3E] font-semibold hover:underline"
+          >
+            info@careermamascircle.com
+          </a>
         </div>
       </div>
     </div>
