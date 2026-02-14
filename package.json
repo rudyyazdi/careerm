@@ -4,11 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "SITE=careerm vite",
+    "dev:careerm": "SITE=careerm vite",
     "build": "tsc -b && vite build",
+    "build:careerm": "SITE=careerm tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "deploy": "npm run build && cd infra && npm run build && npx cdk deploy --require-approval never"
+    "preview": "SITE=careerm vite preview",
+    "preview:careerm": "SITE=careerm vite preview",
+    "deploy:careerm": "SITE=careerm yarn build:careerm && cd infra && npm run build && npx cdk deploy CareerMStack --require-approval never"
   },
   "dependencies": {
     "react": "^19.2.0",

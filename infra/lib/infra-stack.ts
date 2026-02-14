@@ -6,9 +6,15 @@ import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
 import { Construct } from 'constructs';
 import * as path from 'path';
 
+export interface InfraStackProps extends cdk.StackProps {
+  siteName: string;
+}
+
 export class InfraStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: Construct, id: string, props: InfraStackProps) {
     super(scope, id, props);
+
+    const { siteName } = props;
 
     // S3 bucket for hosting static website
     const websiteBucket = new s3.Bucket(this, 'WebsiteBucket', {
@@ -35,7 +41,7 @@ export class InfraStack extends cdk.Stack {
 
     // Deploy website contents to S3
     new s3deploy.BucketDeployment(this, 'DeployWebsite', {
-      sources: [s3deploy.Source.asset(path.join(__dirname, '../../dist'))],
+      sources: [s3deploy.Source.asset(path.join(__dirname, `../../dist/${siteName}`))],
       destinationBucket: websiteBucket,
       distribution,
       distributionPaths: ['/*'],
