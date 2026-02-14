@@ -9,5 +9,7 @@ new InfraStack(app, 'CareerMStack', {
   // env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
 });
 
-// To add a new site, add another stack here:
-// new InfraStack(app, 'NewSiteStack', { siteName: 'newsite' });
+new InfraStack(app, 'GroundedStack', {
+  siteName: 'grounded',
+  // env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
+});

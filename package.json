@@ -11,7 +11,11 @@
     "lint": "eslint .",
     "preview": "SITE=careerm vite preview",
     "preview:careerm": "SITE=careerm vite preview",
-    "deploy:careerm": "SITE=careerm yarn build:careerm && cd infra && npm run build && npx cdk deploy CareerMStack --require-approval never"
+    "deploy:careerm": "SITE=careerm yarn build:careerm && cd infra && npm run build && npx cdk deploy CareerMStack --require-approval never",
+    "dev:grounded": "SITE=grounded vite",
+    "build:grounded": "SITE=grounded tsc -b && vite build",
+    "preview:grounded": "SITE=grounded vite preview",
+    "deploy:grounded": "yarn build:grounded && cd infra && npm run build && npx cdk deploy GroundedStack --require-approval never"
   },
   "dependencies": {
     "react": "^19.2.0",
