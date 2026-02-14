@@ -7,29 +7,18 @@ export default function App() {
   return (
     <div className="min-h-screen">
       {/* Nav */}
-      <nav
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between"
-        style={{
-          padding: "24px",
-          paddingLeft: "clamp(24px, 5vw, 64px)",
-          paddingRight: "clamp(24px, 5vw, 64px)",
-        }}
-      >
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 px-[clamp(24px,5vw,64px)]">
         {/* Logo */}
         <Link to="/" onClick={() => setMenuOpen(false)}>
           <img
             src="/logo.svg"
             alt="Grounded"
-            style={{
-              height: "28px",
-              width: "auto",
-              filter: "invert(1) brightness(2)",
-            }}
+            className="h-7 w-auto invert brightness-200"
           />
         </Link>
 
         {/* Desktop links */}
-        <div style={{ gap: "48px" }} className="hidden md:flex items-center">
+        <div className="hidden md:flex items-center gap-12">
           <NavLink to="/" label="Home" onClick={() => setMenuOpen(false)} />
           <NavLink
             to="/about"
