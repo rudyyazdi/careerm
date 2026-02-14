@@ -1,26 +1,35 @@
 import { useState } from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
-  const onHome = location.pathname === "/";
 
   return (
     <div className="min-h-screen">
       {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between" style={{ padding: '24px', paddingLeft: 'clamp(24px, 5vw, 64px)', paddingRight: 'clamp(24px, 5vw, 64px)' }}>
+      <nav
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between"
+        style={{
+          padding: "24px",
+          paddingLeft: "clamp(24px, 5vw, 64px)",
+          paddingRight: "clamp(24px, 5vw, 64px)",
+        }}
+      >
         {/* Logo */}
         <Link to="/" onClick={() => setMenuOpen(false)}>
           <img
             src="/logo.svg"
             alt="Grounded"
-            style={{ height: '28px', width: 'auto', filter: 'invert(1) brightness(2)' }}
+            style={{
+              height: "28px",
+              width: "auto",
+              filter: "invert(1) brightness(2)",
+            }}
           />
         </Link>
 
         {/* Desktop links */}
-        <div style={{ gap: '48px' }} className="hidden md:flex items-center">
+        <div style={{ gap: "48px" }} className="hidden md:flex items-center">
           <NavLink to="/" label="Home" onClick={() => setMenuOpen(false)} />
           <NavLink
             to="/about"
