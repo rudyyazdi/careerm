@@ -1,5 +1,6 @@
 export default function Home() {
-  const videoFile = '/Veo_3_1_A_cinematic__slow_motion_montage_of_a_modern__stylish_group_of_moms_in_a_wellness_studio_in.mp4'
+  const videoFile =
+    "/Veo_3_1_A_cinematic__slow_motion_montage_of_a_modern__stylish_group_of_moms_in_a_wellness_studio_in.mp4";
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
@@ -18,10 +19,10 @@ export default function Home() {
 
       {/* Centred text */}
       <div className="relative z-10 flex items-center justify-center h-full px-6">
-        <p className="text-white text-center font-light tracking-[0.25em] text-2xl md:text-4xl lg:text-5xl leading-relaxed">
-          Motherhood.&nbsp; Identity.&nbsp; Connection.
+        <p className="text-white text-center font-light tracking-[0.1em] md:tracking-[0.25em] text-lg md:text-4xl lg:text-5xl leading-relaxed">
+          Motherhood.Identity.Connection.
         </p>
       </div>
     </div>
-  )
+  );
 }
