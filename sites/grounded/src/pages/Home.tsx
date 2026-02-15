@@ -20,7 +20,7 @@ export default function Home() {
         <h1 className="relative z-10 font-light text-3xl md:text-5xl lg:text-6xl leading-tight mb-5">
           Grounded Mama Program
         </h1>
-        <p className="relative z-10 font-light text-sm md:text-base opacity-70 max-w-2xl leading-relaxed">
+        <p className="relative z-10 font-light text-base md:text-xl opacity-70 max-w-2xl leading-relaxed">
           A 6 Week Mini Retreat Experience for Women Moving Through Maternity Leave
         </p>
       </section>
