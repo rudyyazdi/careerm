@@ -1,19 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setScroll(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const vh = typeof window !== "undefined" ? window.innerHeight : 800;
+  // blur ramps 0→16px over the first half of the video
+  const blurAmount = Math.min(scroll / (vh / 2), 1) * 16;
+  // tint starts 200px before video ends, ramps over 200px
+  const tintOpacity = Math.min(Math.max(scroll - (vh - 200), 0) / 200, 1) * 0.15;
 
   return (
     <div className="min-h-screen">
       {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 px-[clamp(24px,5vw,64px)]">
+      <nav
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 px-[clamp(24px,5vw,64px)] transition-all duration-100"
+        style={{
+          backdropFilter: `blur(${blurAmount}px)`,
+          backgroundColor: `rgba(0,0,0,${tintOpacity})`,
+        }}
+      >
         {/* Logo */}
         <Link to="/" onClick={() => setMenuOpen(false)}>
           <img
             src="/logo.svg"
             alt="Grounded"
-            className="h-7 w-auto invert brightness-200"
+            className="h-7 w-auto brightness-0 invert"
           />
         </Link>
 
