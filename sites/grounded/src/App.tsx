@@ -5,13 +5,20 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scroll, setScroll] = useState(0);
 
+  const [vh, setVh] = useState(typeof window !== "undefined" ? window.innerHeight : 800);
+
   useEffect(() => {
     const onScroll = () => setScroll(window.scrollY);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    const onResize = () => setVh(window.innerHeight);
 
-  const vh = typeof window !== "undefined" ? window.innerHeight : 800;
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
   // blur ramps 0→16px over the first half of the video
   const blurAmount = Math.min(scroll / (vh / 2), 1) * 16;
   // tint starts 200px before video ends, ramps over 200px

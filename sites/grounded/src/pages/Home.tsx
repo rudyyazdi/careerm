@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="bg-stone-50 text-stone-800">
       {/* ── HERO ── */}
-      <section className="relative w-full h-screen overflow-hidden bg-black flex flex-col justify-center items-center px-6 text-center text-white">
+      <section className="relative w-full h-dvh overflow-hidden bg-black flex flex-col justify-center items-center px-6 text-center text-white">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           src={videoFile}
@@ -60,14 +60,17 @@ export default function Home() {
       </section>
 
       <div
-        className="w-full h-64 md:h-96"
-        style={{
-          backgroundImage: "url('/mums-in-studio.png')",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
+        className="w-full h-64 md:h-96 relative"
+        style={{ clipPath: "inset(0)" }}
+      >
+        <div
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/mums-in-studio.png')",
+            pointerEvents: "none",
+          }}
+        />
+      </div>
 
       {/* ── THE GROUNDED EXPERIENCE ── */}
       <section className="py-28 px-6 max-w-3xl mx-auto text-center">
