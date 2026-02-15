@@ -59,6 +59,16 @@ export default function Home() {
         <p className="mt-4 text-xs text-stone-400 tracking-wider uppercase">Places released per intake.</p>
       </section>
 
+      <div
+        className="w-full h-64 md:h-96"
+        style={{
+          backgroundImage: "url('/mums-in-studio.png')",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+
       {/* ── THE GROUNDED EXPERIENCE ── */}
       <section className="py-28 px-6 max-w-3xl mx-auto text-center">
         <p className="uppercase tracking-[0.3em] text-xs text-stone-400 mb-6">The Grounded Experience</p>
