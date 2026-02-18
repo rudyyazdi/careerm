@@ -46,20 +46,14 @@ export default function App() {
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-12">
           <NavLink to="/" label="Home" onClick={() => setMenuOpen(false)} />
-          <NavLink
-            to="/about"
-            label="About"
-            onClick={() => setMenuOpen(false)}
-          />
-          <NavLink
-            to="/contact"
-            label="Contact"
-            onClick={() => setMenuOpen(false)}
-          />
+          <NavLink to="/about" label="About" onClick={() => setMenuOpen(false)} />
+          <NavLink to="/faq" label="FAQ" onClick={() => setMenuOpen(false)} />
+          <NavLink to="/contact" label="Contact" onClick={() => setMenuOpen(false)} />
         </div>
 
         {/* Mobile hamburger */}
         <button
+          type="button"
           className="md:hidden flex flex-col gap-1.5 p-1"
           onClick={() => setMenuOpen((o) => !o)}
           aria-label="Toggle menu"
@@ -79,24 +73,10 @@ export default function App() {
       {/* Mobile menu overlay */}
       {menuOpen && (
         <div className="fixed inset-0 z-40 bg-black/90 flex flex-col items-center justify-center gap-10 md:hidden">
-          <NavLink
-            to="/"
-            label="Home"
-            large
-            onClick={() => setMenuOpen(false)}
-          />
-          <NavLink
-            to="/about"
-            label="About"
-            large
-            onClick={() => setMenuOpen(false)}
-          />
-          <NavLink
-            to="/contact"
-            label="Contact"
-            large
-            onClick={() => setMenuOpen(false)}
-          />
+          <NavLink to="/" label="Home" large onClick={() => setMenuOpen(false)} />
+          <NavLink to="/about" label="About" large onClick={() => setMenuOpen(false)} />
+          <NavLink to="/faq" label="FAQ" large onClick={() => setMenuOpen(false)} />
+          <NavLink to="/contact" label="Contact" large onClick={() => setMenuOpen(false)} />
         </div>
       )}
 

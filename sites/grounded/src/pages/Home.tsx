@@ -1,6 +1,9 @@
+import { useId } from "react";
+
 export default function Home() {
   const videoFile = "/grounded-hero-video.mp4";
   const posterFile = "/grounded-hero-poster.jpg";
+  const applyId = useId();
 
   return (
     <div className="bg-stone-50 text-stone-800">
@@ -20,116 +23,32 @@ export default function Home() {
         <h1 className="relative z-10 font-light text-3xl md:text-5xl lg:text-6xl leading-tight mb-5">
           Grounded Mama Program
         </h1>
-        <p className="relative z-10 font-light text-base md:text-xl opacity-70 max-w-2xl leading-relaxed">
-          A 6 Week Mini Retreat Experience for Women Moving Through Maternity Leave
+        <p className="relative z-10 font-light text-base md:text-xl opacity-70 max-w-2xl leading-relaxed mb-10">
+          A 6 Week Mini Retreat Experience for Women Moving Through Motherhood
+        </p>
+        <a
+          href={`#${applyId}`}
+          className="relative z-10 border border-white/50 text-white uppercase tracking-widest text-xs px-10 py-4 hover:bg-white hover:text-stone-900 transition-colors duration-300 mb-4"
+        >
+          Apply for Founding Intake
+        </a>
+        <p className="relative z-10 text-xs text-white/50 tracking-wider uppercase">
+          Limited founding places available
         </p>
       </section>
 
       {/* ── HERO INTRO ── */}
-      <section className="py-20 px-6 max-w-3xl mx-auto text-center">
-        <p className="text-stone-500 font-light text-base md:text-lg leading-relaxed mb-12">
-          Grounded is a guided transition experience designed for mothers in early maternity leave
-          who want to reconnect with themselves, rebuild confidence, and find real community with
-          women in the same stage of life.
+      <section className="bg-stone-100 py-20 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+        <p className="text-stone-500 font-light text-base md:text-lg leading-relaxed">
+          Grounded is a guided experience designed for mothers in maternity leave who want to
+          reconnect with themselves, rebuild confidence, and find real community with women in
+          the same stage of life.
           <br /><br />
-          Each session is designed to feel like stepping out of noise and into calm, clarity and community.
+          Each week you step into a calm, thoughtfully curated space designed to support your
+          whole self — mind, body and identity. Through expert-led guidance, meaningful
+          conversations and wellness rituals while having your baby by your side.
         </p>
-
-        <ul className="font-light text-sm md:text-base text-stone-500 space-y-3 mb-12 text-left max-w-lg mx-auto">
-          {[
-            "Designed for mothers navigating early maternity leave",
-            "Mini retreat style environment each session",
-            "Guided identity and life transition journey across 6 weeks",
-            "Expert led sessions across body, confidence, intimacy and future direction",
-            "Beautiful, baby friendly, judgement free space",
-          ].map((item) => (
-            <li key={item} className="flex items-start gap-3">
-              <span className="mt-2 w-1 h-1 rounded-full bg-stone-400 shrink-0" />
-              {item}
-            </li>
-          ))}
-        </ul>
-
-        <a
-          href="#apply"
-          className="inline-block border border-stone-400 text-stone-700 uppercase tracking-widest text-xs px-10 py-4 hover:bg-stone-800 hover:text-white hover:border-stone-800 transition-colors duration-300"
-        >
-          Apply for the Program
-        </a>
-        <p className="mt-4 text-xs text-stone-400 tracking-wider uppercase">Places released per intake.</p>
-      </section>
-
-      <div
-        className="w-full h-64 md:h-96 relative"
-        style={{ clipPath: "inset(0)" }}
-      >
-        <div
-          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/mums-in-studio.png')",
-            pointerEvents: "none",
-          }}
-        />
-      </div>
-
-      {/* ── THE GROUNDED EXPERIENCE ── */}
-      <section className="py-28 px-6 max-w-3xl mx-auto text-center">
-        <p className="uppercase tracking-[0.3em] text-xs text-stone-400 mb-6">The Grounded Experience</p>
-        <h2 className="font-light text-3xl md:text-4xl leading-snug mb-8">
-          This Is Not Just A Session. It Is A Reset.
-        </h2>
-        <p className="text-stone-500 font-light leading-relaxed mb-16">
-          From the moment you arrive, you step into a space designed to help you slow down and feel grounded.
-          You can expect a calm, beautifully prepared environment, grounding welcome moments and thoughtful details
-          throughout the space that support you to feel relaxed, safe and cared for.
-          <br /><br />
-          This is a space created for you to slow down and be held in the experience.
-        </p>
-
-        <h3 className="font-light text-2xl md:text-3xl mb-6">Then The Real Value Begins</h3>
-        <p className="text-stone-500 font-light leading-relaxed mb-8">
-          Inside that environment, you will experience:
-        </p>
-        <ul className="text-stone-500 font-light space-y-3 text-left max-w-xl mx-auto mb-16">
-          {[
-            "Deeper connection with mothers in the same life stage",
-            "Guided conversations that go beyond surface level motherhood chat",
-            "Expert led practices and education you can apply in real life",
-            "Practical tools you take home and use immediately",
-          ].map((item) => (
-            <li key={item} className="flex items-start gap-3">
-              <span className="mt-2 w-1 h-1 rounded-full bg-stone-400 shrink-0" />
-              {item}
-            </li>
-          ))}
-        </ul>
-        <p className="text-stone-500 font-light leading-relaxed mb-2">
-          Each session closes with reflection and integration so the change actually lands.
-        </p>
-
-        <div className="mt-12 border-t border-stone-200 pt-12">
-          <h3 className="font-light text-xl mb-4 text-stone-700">The Takeaway</h3>
-          <p className="text-stone-500 font-light leading-relaxed max-w-xl mx-auto">
-            Every session includes a thoughtfully curated take home element, designed to support you
-            practically, emotionally or reflectively, long after you leave the room.
-          </p>
-        </div>
-      </section>
-
-      {/* ── WHY GROUNDED EXISTS ── */}
-      <section className="bg-stone-100 py-28 px-6">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="uppercase tracking-[0.3em] text-xs text-stone-400 mb-6">Why Grounded Exists</p>
-          <h2 className="font-light text-3xl md:text-4xl leading-snug mb-8">
-            Motherhood is one of life's biggest identity shifts.
-          </h2>
-          <p className="text-stone-500 font-light leading-relaxed">
-            Alongside loving and caring for your baby, you may also find yourself navigating who you are
-            becoming, what matters most to you now, and how you want life to look moving forward.
-            <br /><br />
-            Grounded exists to support you through this transition, with connection, guidance and space
-            to reconnect with yourself.
-          </p>
         </div>
       </section>
 
@@ -162,6 +81,19 @@ export default function Home() {
         </div>
       </section>
 
+      <div
+        className="w-full h-64 md:h-96 relative"
+        style={{ clipPath: "inset(0)" }}
+      >
+        <div
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/mums-in-studio.png')",
+            pointerEvents: "none",
+          }}
+        />
+      </div>
+
       {/* ── WHO THIS IS FOR ── */}
       <section className="bg-stone-100 py-28 px-6">
         <div className="max-w-2xl mx-auto text-center">
@@ -169,13 +101,29 @@ export default function Home() {
           <h2 className="font-light text-3xl md:text-4xl leading-snug mb-12">
             This experience is for you if:
           </h2>
-          <ul className="text-stone-500 font-light space-y-4 text-left max-w-lg mx-auto">
+          <ul className="text-stone-500 font-light space-y-4 text-left max-w-lg mx-auto mb-16">
             {[
               "You want more than a casual mothers group",
               "You want depth without heaviness",
               "You value beautiful environments and meaningful experiences",
               "You want to reconnect with who you are, not just who you care for",
               "You want to meet mothers who are navigating the same life stage",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <span className="mt-2 w-1 h-1 rounded-full bg-stone-400 shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <p className="uppercase tracking-[0.3em] text-xs text-stone-400 mb-8">Experience Highlights</p>
+          <ul className="text-stone-500 font-light space-y-3 text-left max-w-lg mx-auto">
+            {[
+              "Designed for mothers navigating maternity leave",
+              "Mini retreat style environment each session",
+              "Guided identity and life transition journey across 6 weeks",
+              "Expert led sessions across body, confidence, intimacy and future direction",
+              "Baby friendly, judgement free space",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <span className="mt-2 w-1 h-1 rounded-full bg-stone-400 shrink-0" />
@@ -190,31 +138,16 @@ export default function Home() {
       <section className="py-28 px-6">
         <div className="max-w-2xl mx-auto text-center">
           <p className="uppercase tracking-[0.3em] text-xs text-stone-400 mb-6">Practical Details</p>
-          <div className="text-stone-500 font-light leading-relaxed space-y-2 mb-10">
+          <div className="text-stone-500 font-light leading-relaxed space-y-2">
             <p>Location: Bondi area</p>
             <p>Duration: 6 weeks</p>
             <p>Session Length: 2 to 2.5 hours</p>
           </div>
-          <p className="text-stone-700 font-light mb-4">Includes:</p>
-          <ul className="text-stone-500 font-light space-y-3 text-left max-w-sm mx-auto">
-            {[
-              "All sessions",
-              "Guest experts",
-              "Curated experience environment each session",
-              "Grounded Mama take home elements",
-              "Community connection beyond the program",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <span className="mt-2 w-1 h-1 rounded-full bg-stone-400 shrink-0" />
-                {item}
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
       {/* ── FINAL CTA ── */}
-      <section id="apply" className="bg-stone-900 text-white py-28 px-6 text-center">
+      <section id={applyId} className="bg-stone-900 text-white py-28 px-6 text-center">
         <p className="uppercase tracking-[0.3em] text-xs text-stone-400 mb-8">Apply</p>
         <h2 className="font-light text-3xl md:text-5xl leading-snug max-w-2xl mx-auto mb-8">
           You Were Never Meant To Navigate This Alone
@@ -224,10 +157,11 @@ export default function Home() {
         </p>
         <a
           href="/contact"
-          className="border border-white/40 text-white uppercase tracking-widest text-xs px-12 py-4 hover:bg-white hover:text-stone-900 transition-colors duration-300"
+          className="inline-block border border-white/40 text-white uppercase tracking-widest text-xs px-12 py-4 hover:bg-white hover:text-stone-900 transition-colors duration-300"
         >
-          Apply for Your Place
+          Apply for the Program
         </a>
+        <p className="mt-4 text-xs text-stone-500 tracking-wider uppercase">Limited spaces available</p>
       </section>
     </div>
   );
