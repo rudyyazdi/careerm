@@ -70,7 +70,9 @@ export default function About() {
       {/* ── CTA ── */}
       <section className="py-28 px-6 text-center">
         <a
-          href="/contact"
+          href="https://tally.so/r/9qWDl5"
+          target="_blank"
+          rel="noreferrer"
           className="inline-block border border-stone-400 text-stone-700 uppercase tracking-widest text-xs px-10 py-4 hover:bg-stone-800 hover:text-white hover:border-stone-800 transition-colors duration-300"
         >
           Apply for the Program

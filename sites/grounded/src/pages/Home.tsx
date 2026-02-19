@@ -1,9 +1,8 @@
-import { useId } from "react";
+const APPLY_URL = "https://tally.so/r/9qWDl5";
 
 export default function Home() {
   const videoFile = "/grounded-hero-video.mp4";
   const posterFile = "/grounded-hero-poster.jpg";
-  const applyId = useId();
 
   return (
     <div className="bg-stone-50 text-stone-800">
@@ -27,7 +26,9 @@ export default function Home() {
           A 6 Week Mini Retreat Experience for Women Moving Through Motherhood
         </p>
         <a
-          href={`#${applyId}`}
+          href={APPLY_URL}
+          target="_blank"
+          rel="noreferrer"
           className="relative z-10 border border-white/50 text-white uppercase tracking-widest text-xs px-10 py-4 hover:bg-white hover:text-stone-900 transition-colors duration-300 mb-4"
         >
           Apply for Founding Intake
@@ -147,7 +148,7 @@ export default function Home() {
       </section>
 
       {/* ── FINAL CTA ── */}
-      <section id={applyId} className="bg-stone-900 text-white py-28 px-6 text-center">
+      <section className="bg-stone-900 text-white py-28 px-6 text-center">
         <p className="uppercase tracking-[0.3em] text-xs text-stone-400 mb-8">Apply</p>
         <h2 className="font-light text-3xl md:text-5xl leading-snug max-w-2xl mx-auto mb-8">
           You Were Never Meant To Navigate This Alone
@@ -156,7 +157,9 @@ export default function Home() {
           Grounded is where motherhood and identity are allowed to exist together.
         </p>
         <a
-          href="/contact"
+          href={APPLY_URL}
+          target="_blank"
+          rel="noreferrer"
           className="inline-block border border-white/40 text-white uppercase tracking-widest text-xs px-12 py-4 hover:bg-white hover:text-stone-900 transition-colors duration-300"
         >
           Apply for the Program
