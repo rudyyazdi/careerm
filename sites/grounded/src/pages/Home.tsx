@@ -36,6 +36,9 @@ export default function Home() {
         <p className="relative z-10 text-xs text-white/50 tracking-wider uppercase">
           Limited founding places available
         </p>
+        <p className="relative z-10 text-xs text-white/50 tracking-wider uppercase">
+          1 session for $69 and 3 for $180
+        </p>
       </section>
 
       {/* ── HERO INTRO ── */}
@@ -140,9 +143,10 @@ export default function Home() {
         <div className="max-w-2xl mx-auto text-center">
           <p className="uppercase tracking-[0.3em] text-xs text-stone-400 mb-6">Practical Details</p>
           <div className="text-stone-500 font-light leading-relaxed space-y-2">
-            <p>Location: Bondi area</p>
-            <p>Duration: 6 weeks</p>
-            <p>Session Length: 2 to 2.5 hours</p>
+            <p>Location: Body by Berner, North Bondi</p>
+            <p>Duration: 6  (individual sessions available to purchase)</p>
+            <p>Session Length: 2 hours</p>
+            <p>Start date: April 22nd, 1:30pm</p>
           </div>
         </div>
       </section>
